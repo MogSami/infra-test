@@ -117,6 +117,9 @@ spec:
                 cert-manager.io/cluster-issuer: letsencrypt-cluster-issuer
               labels:
                 mo-app: my-deployment
+              relatedResourceUid:
+                - f73e01cd-2938-4de7-8588-a3be1c6baa19
+              selectType: Ingress
               spec:
                 ingressClassName: traefik
                 rules:
@@ -130,16 +133,7 @@ spec:
                                 number: 45
                           path: /
                           pathType: Prefix
-                  - host: my-deployment-xjz8ku.lol.de
-                    http:
-                      paths:
-                        - backend:
-                            service:
-                              name: my-deployment
-                              port:
-                                number: 80
-                          path: /
-                          pathType: Prefix
+                    id: 5b7f12v6k72u6pnjnbh864t
                   - host: my-deployment-sq2iye.ping.de
                     http:
                       paths:
@@ -150,16 +144,7 @@ spec:
                                 number: 80
                           path: /
                           pathType: Prefix
-                  - host: my-deployment-f4yu8p.klick.de
-                    http:
-                      paths:
-                        - backend:
-                            service:
-                              name: my-deployment
-                              port:
-                                number: 80
-                          path: /
-                          pathType: Prefix
+                    id: upj7v8gpsrrl9ve1uy6ja6b
                   - host: my-deployment-lxc96c.fefe.de
                     http:
                       paths:
@@ -170,12 +155,12 @@ spec:
                                 number: 80
                           path: /
                           pathType: Prefix
+                    id: uejihrk7fea9giszchnq3lx
                 tls:
                   - hosts:
                       - my-deployment-zsowpo.miau.de
                       - my-deployment-schvcb.tes.de
                       - my-deployment-fqqcd9.fix.de
-                      - my-deployment-xjz8ku.lol.de
                       - my-deployment-sq2iye.ping.de
                       - my-deployment-lxc96c.fefe.de
                     secretName: my-deployment-tls
