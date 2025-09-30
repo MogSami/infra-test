@@ -164,6 +164,7 @@ spec:
                     - name: image-pull-secret-ghcr-dummy
                     - name: image-pull-secret-ghcr-b5notm
                     - name: image-pull-secret-ghcr-moep
+                    - name: image-pull-secret-ghcr-56v4jh
                   restartPolicy: Always
                   schedulerName: default-scheduler
                   securityContext: {}
